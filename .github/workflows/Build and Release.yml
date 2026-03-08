@@ -205,7 +205,7 @@ jobs:
 
         echo "Downloading From: https://repo.dynastic.co/$FILENAME"
         # Download the file using curl
-        curl -LJO "https://repo.dynastic.co/$FILENAME"
+        curl --insecure -LJO "https://repo.dynastic.co/$FILENAME"
         downloaded_file=$(ls -t | head -n1)
         mv "$downloaded_file" "Build Components/"
         sposify="Build Components/$downloaded_file"
